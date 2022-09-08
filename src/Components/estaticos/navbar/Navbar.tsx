@@ -1,10 +1,13 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { Link, useNavigate } from 'react-router-dom';
 import { Box } from '@mui/material';
+import"./Navbar.css";
+
 function Navbar() {
     return (
-        <>
-            <AppBar position="static">
+        <div className='color-top'>
+            <AppBar position="static" className='color-top' >
                 <Toolbar variant="dense">
                     <Box style={{ cursor: "pointer" }} >
                         <Typography variant="h5" color="inherit">
@@ -12,7 +15,7 @@ function Navbar() {
                         </Typography>
                     </Box>
 
-                    <Box display="flex" justifyContent="start">
+                    <Box display="flex" justifyContent="start" >
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
                                 home
@@ -33,16 +36,18 @@ function Navbar() {
                                 cadastrar tema
                             </Typography>
                         </Box>
+                        <Link to='/login' className='text-decorator-none'>
                         <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
+                            <Typography variant="h6" color="inherit" className='Color'>
                                 logout
                             </Typography>
                         </Box>
-                    </Box>
+                    </Link>
+                </Box>
 
-                </Toolbar>
-            </AppBar>
-        </>
+            </Toolbar>
+        </AppBar>
+        </div>
     )
 }
 

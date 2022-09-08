@@ -1,0 +1,10 @@
+.color-top{
+    background-color: #BC8F8F !important;
+}
+.Sub{
+    text-decoration: none;
+}
+@font-face {
+    font-family: [nome];
+    src: url([caminho]);
+ }
